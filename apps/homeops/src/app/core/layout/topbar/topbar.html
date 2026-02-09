@@ -1,0 +1,45 @@
+<mat-toolbar class="topbar" color="transparent">
+    <button class="topbar__menu" mat-icon-button type="button" aria-label="Open menu" (click)="menuToggle.emit()">
+        <mat-icon fontSet="material-symbols-outlined">menu</mat-icon>
+    </button>
+
+    <div class="topbar__search">
+        <mat-form-field appearance="outline" subscriptSizing="dynamic" class="topbar__searchField">
+            <mat-icon matPrefix fontSet="material-symbols-outlined">search</mat-icon>
+            <input matInput placeholder="Search assets or tasks..." />
+        </mat-form-field>
+
+    </div>
+
+    <div class="topbar__actions">
+        <button mat-icon-button class="topbar__iconBtn" [matBadge]="1" matBadgeSize="small" aria-label="Notifications">
+            <mat-icon fontSet="material-symbols-outlined">notifications</mat-icon>
+        </button>
+
+        <div class="topbar__divider"></div>
+
+        <button mat-button class="topbar__user" [matMenuTriggerFor]="userMenu">
+            <div class="topbar__userText">
+                <div class="topbar__userName">Alex Johnson</div>
+                <div class="topbar__userRole">Home Owner</div>
+            </div>
+            <div class="topbar__avatar" aria-hidden="true"></div>
+        </button>
+
+        <mat-menu #userMenu="matMenu">
+            <button mat-menu-item>
+                <mat-icon fontSet="material-symbols-outlined">person</mat-icon>
+                <span>Profile</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon fontSet="material-symbols-outlined">settings</mat-icon>
+                <span>Settings</span>
+            </button>
+            <mat-divider></mat-divider>
+            <button mat-menu-item>
+                <mat-icon fontSet="material-symbols-outlined">logout</mat-icon>
+                <span>Logout</span>
+            </button>
+        </mat-menu>
+    </div>
+</mat-toolbar>
