@@ -1,0 +1,111 @@
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+}
+
+.sidebar__logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+}
+
+.sidebar__title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.sidebar__subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.sidebar__nav {
+  padding-top: 8px;
+}
+
+:host ::ng-deep a.mat-mdc-list-item.is-active {
+  background: color-mix(in srgb, var(--mat-sys-primary) 12%, transparent);
+  border-radius: 12px;
+  margin: 4px 12px;
+}
+
+:host ::ng-deep a.mat-mdc-list-item.is-active .mdc-list-item__primary-text,
+:host ::ng-deep a.mat-mdc-list-item.is-active mat-icon {
+  color: var(--mat-sys-primary);
+  font-weight: 700;
+}
+
+.sidebar__footer {
+  margin-top: auto;
+  padding: 16px;
+}
+
+.sidebar__storage {
+  padding: 14px;
+  border-radius: 16px;
+}
+
+.sidebar__storageTitle {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.sidebar__storageMeta {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+/* item height + padding homogéneo */
+:host ::ng-deep .sidebar__nav a.mat-mdc-list-item {
+  height: 52px;
+  margin: 6px 12px;
+  border-radius: 14px;
+}
+
+/* alinear icono vertical y tamaño consistente */
+:host ::ng-deep .sidebar__nav .mat-mdc-list-item mat-icon[matlistitemicon] {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  line-height: 24px;
+  display: grid;
+  place-items: center;
+}
+
+/* texto alineado */
+:host ::ng-deep .sidebar__nav .mat-mdc-list-item .mdc-list-item__primary-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* activo como tu screenshot */
+:host ::ng-deep .sidebar__nav a.mat-mdc-list-item.is-active {
+  background: color-mix(in srgb, var(--mat-sys-primary) 12%, transparent);
+}
+
+:host ::ng-deep .sidebar__nav a.mat-mdc-list-item.is-active
+.mdc-list-item__primary-text,
+:host ::ng-deep .sidebar__nav a.mat-mdc-list-item.is-active mat-icon {
+  color: var(--mat-sys-primary);
+  font-weight: 700;
+}

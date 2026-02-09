@@ -1,0 +1,24 @@
+.shell {
+  height: 100vh;
+}
+
+.shell__sidenav {
+  width: 280px;
+  border-right: 1px solid var(--mat-sys-outline-variant);
+  background: var(--mat-sys-surface);
+}
+
+.shell__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+.shell__main {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  background: var(--mat-sys-background);
+  padding: 24px;
+}

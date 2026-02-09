@@ -1,2 +1,19 @@
-<p>shell works!</p>
-<router-outlet/>
+<mat-sidenav-container class="shell">
+  <mat-sidenav
+    class="shell__sidenav"
+    [mode]="isDesktop ? 'side' : 'over'"
+    [opened]="isDesktop"
+    [fixedInViewport]="!isDesktop"
+    (closedStart)="closeOnMobile()"
+  >
+    <app-sidebar (navigate)="closeOnMobile()"></app-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="shell__content">
+    <app-topbar (menuToggle)="toggleSidenav()"></app-topbar>
+
+    <main class="shell__main">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
